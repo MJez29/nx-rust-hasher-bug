@@ -1,0 +1,23 @@
+{
+  "name": "nx-rust-hasher-bug",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "demo": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["production"],
+      "options": {
+        "commands": ["node src/index.js"]
+      }
+    },
+    "increment": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["node src/increment.js"]
+      }
+    }
+  }
+}
